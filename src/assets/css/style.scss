@@ -1,0 +1,399 @@
+@import "./layout.scss";
+
+@font-face {
+  font-family: "Domine";
+  src: local("Domine"), url(../fonts/Domine-Regular.ttf)format("truetype");
+}
+
+body {
+  font-family: $title-font;
+  color: $text-color;
+  background: #101010;
+}
+main {
+  padding: 0 7.5vw;
+  background: url("../images/pattern.png");
+  background-repeat: repeat-y;
+  background-size: contain;
+}
+
+.logo-mini {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 1.6rem;
+}
+
+.btn {
+  padding: $md $lg;
+  border-radius: $xs;
+  background: rgba(0, 0, 0, 0.12);
+  border: none;
+  color: $text-color;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  font-size: 1rem;
+  font-weight: 600;
+
+  &:active {
+    transform: translateY(2px);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+
+  &.primary {
+    background: $primary-color;
+    color: $light-color;
+  }
+
+  &.secondary {
+    background: $secondary-color;
+    color: $light-color;
+  }
+
+  &.light {
+    background: $light-color;
+    color: $primary-color;
+  }
+
+  &.success {
+    background: $success-color;
+    color: $light-color;
+  }
+
+  &.danger {
+    background: $danger-color;
+    color: $light-color;
+  }
+
+  &.info {
+    background: $info-color;
+    color: $light-color;
+  }
+
+  &.warning {
+    background: $warning-color;
+    color: $light-color;
+  }
+
+  &.outlined.primary {
+    border: 1px solid $primary-color;
+    background: transparent;
+    color: $primary-color;
+
+    &:hover {
+      background: $primary-color;
+      color: $light-color;
+    }
+  }
+
+  &.outlined.secondary {
+    border: 1px solid $secondary-color;
+    background: transparent;
+    color: $secondary-color;
+
+    &:hover {
+      background: $secondary-color;
+      color: $light-color;
+    }
+  }
+
+  &.outlined.light {
+    border: 1px solid $light-color;
+    background: transparent;
+    color: $light-color;
+
+    &:hover {
+      background: $light-color;
+      color: $light-color;
+    }
+  }
+
+  &.outlined.success {
+    border: 1px solid $success-color;
+    background: transparent;
+    color: $success-color;
+
+    &:hover {
+      background: $success-color;
+      color: $light-color;
+    }
+  }
+
+  &.outlined.danger {
+    border: 1px solid $danger-color;
+    background: transparent;
+    color: $danger-color;
+
+    &:hover {
+      background: $danger-color;
+      color: $light-color;
+    }
+  }
+
+  &.outlined.info {
+    border: 1px solid $info-color;
+    background: transparent;
+    color: $info-color;
+
+    &:hover {
+      background: $info-color;
+      color: $light-color;
+    }
+  }
+
+  &.outlined.warning {
+    border: 1px solid $warning-color;
+    background: transparent;
+    color: $warning-color;
+
+    &:hover {
+      background: $warning-color;
+      color: $light-color;
+    }
+  }
+}
+
+img.hoverable {
+  transition: 0.3s ease-in-out;
+  &:hover {
+    transform: translateY(-0.2rem);
+    box-shadow: 0px 6px 25px -8px rgb(0, 0, 0);
+  }
+}
+
+.form-group {
+  margin-bottom: $md;
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-size: 0.8rem;
+  }
+
+  input {
+    background: rgba(0, 0, 0, 0.12);
+    color: $text-color;
+    border-radius: $xs;
+    border: none;
+    padding: $sm;
+    &.rounded {
+      border-radius: 30px;
+      padding: $sm $lg;
+    }
+    &::placeholder {
+      font-family: $title-font;
+    }
+  }
+
+  .input-area {
+    display: flex;
+    align-items: center;
+    input {
+      flex: 1;
+    }
+  }
+
+  .error-text {
+    text-align: right;
+    color: $danger-color;
+  }
+}
+
+//backgrounds
+.bg-primary {
+  background-color: $primary-color;
+}
+
+.bg-secondary {
+  background-color: $secondary-color;
+}
+
+.bg-light {
+  background-color: $light-color;
+}
+
+.bg-success {
+  background-color: $success-color;
+}
+
+.bg-danger {
+  background-color: $danger-color;
+}
+
+.bg-info {
+  background-color: $info-color;
+}
+
+.bg-warning {
+  background-color: $warning-color;
+}
+
+//texts
+.text-primary {
+  color: $primary-color;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+.text-light {
+  color: $light-color;
+}
+
+.text-success {
+  color: $success-color;
+}
+
+.text-danger {
+  color: $danger-color;
+}
+
+.text-info {
+  color: $info-color;
+}
+
+.text-warning {
+  color: $warning-color;
+}
+
+.title {
+  font-size: $title-size;
+}
+
+.small-title {
+  font-size: 1.8rem;
+}
+
+p {
+  font-family: $accent-font;
+  color: #e8e8e8;
+  line-height: 1.8rem;
+}
+
+.sub-title {
+  font-family: $accent-font;
+  font-size: $accent-size;
+}
+
+.action-area {
+  font-family: $accent-font;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+.bold {
+  font-weight: bold;
+}
+
+.bolder {
+  font-weight: bolder;
+}
+
+.card,
+%card {
+  border-radius: $sm;
+  padding: $md;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.12);
+}
+
+//scrollbar
+.pointer {
+  cursor: pointer;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $primary-color;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.img-1,
+.img-2 {
+  transition: 0.6s ease-in-out;
+  filter: saturate(0);
+  &:hover {
+    filter: saturate(1.3);
+  }
+}
+
+.paragraph {
+  p {
+    width: 80%;
+  }
+}
+
+.hide-name {
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.show-name {
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+  text-shadow: 0px 1px 8px #000000;
+}
+section.menu {
+  background-image: url("../images/menu-banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1vh;
+  width: 60vw;
+  position: relative;
+  border-radius: 2em;
+  overflow: hidden;
+  &::after {
+    content: ""; // ::before and ::after both require content
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.7;
+  }
+}
+
+.form {
+  input {
+    font-size: 18px;
+    color: #666;
+    &:focus {
+      outline: none;
+    }
+  }
+}
