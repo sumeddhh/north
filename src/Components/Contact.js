@@ -2,8 +2,8 @@ import logo from '../assets/images/Logo_North-01.png';
 
 const Contact = () => {
     return (
-        <section style={{ paddingBottom: '10vh', width: '85%' }} className="flex justify-between">
-            <div className="col-1 flex">
+        <section style={{ paddingBottom: '10vh'}} className="contact-section flex justify-between">
+            <div className="column-1 flex">
                 <div className="image-area">
                     <img src={logo} alt="North Logo" height="140px" width="140px" />
                 </div>
@@ -17,7 +17,7 @@ const Contact = () => {
                 </div>
             </div>
 
-            <div className="col-2 flex column">
+            <div className="column-2 flex column">
                 <div className="small-title">Contact Us</div>
                 <div className="paragraph">
                     <p style={{ width: '20vw' }}>
